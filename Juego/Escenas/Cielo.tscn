@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://dj4c2w8t7rm3b"]
+[gd_scene load_steps=12 format=3 uid="uid://dj4c2w8t7rm3b"]
 
 [ext_resource type="Script" path="res://Scrips/Musica_Cielo.gd" id="1_peugf"]
 [ext_resource type="Texture2D" uid="uid://bgubiokacb5td" path="res://Partes/Nubes_Pixel_art.png" id="1_y27b3"]
 [ext_resource type="Texture2D" uid="uid://bdb4w70dutbgc" path="res://Partes/Cielo_02.png" id="2_40dla"]
 [ext_resource type="Texture2D" uid="uid://dvjfhvs64chyp" path="res://Partes/Cielo_03.png" id="3_5vhri"]
-[ext_resource type="Script" path="res://Scrips/Control_Cielo.gd" id="4_a3rw6"]
 [ext_resource type="Texture2D" uid="uid://3w2b2gjv01av" path="res://Sprites/Poder_Munkar.png" id="5_0lqkb"]
+[ext_resource type="PackedScene" uid="uid://b3b1kd356pq2x" path="res://Escenas/angel.tscn" id="6_5rnk1"]
 [ext_resource type="AudioStream" uid="uid://c054g1qb73gj5" path="res://Musica Munkar/Canciones/Musica_Loop.wav" id="7_1yy2t"]
+[ext_resource type="PackedScene" uid="uid://dwwg6uw6hr6sq" path="res://Escenas/Issac.tscn" id="8_lywr5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6rqq5"]
 size = Vector2(11604, 89)
@@ -14,8 +15,8 @@ size = Vector2(11604, 89)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5c7q"]
 size = Vector2(971, 1024)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h05av"]
-size = Vector2(991.5, 1045)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p07wi"]
+size = Vector2(772, 1116)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 script = ExtResource("1_peugf")
@@ -88,10 +89,6 @@ shape = SubResource("RectangleShape2D_6rqq5")
 position = Vector2(475.5, 502)
 shape = SubResource("RectangleShape2D_n5c7q")
 
-[node name="NopasarDer" type="CollisionShape2D" parent="."]
-position = Vector2(11130.8, 488)
-shape = SubResource("RectangleShape2D_h05av")
-
 [node name="P6" type="Sprite2D" parent="."]
 position = Vector2(10634.5, 548)
 scale = Vector2(0.815889, 0.773465)
@@ -122,35 +119,82 @@ position = Vector2(967.625, 548.875)
 scale = Vector2(0.813262, 0.7747)
 texture = ExtResource("3_5vhri")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 10704.0
-offset_top = 63.0
-offset_right = 10986.0
-offset_bottom = 315.0
-script = ExtResource("4_a3rw6")
+[node name="Enemigos" type="Node2D" parent="."]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -68.0
-offset_top = -68.0
-offset_right = 68.0
-offset_bottom = 68.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Angel" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(10311, 357)
 
-[node name="Button" type="Button" parent="Control/VBoxContainer"]
-layout_mode = 2
-icon = ExtResource("5_0lqkb")
-flat = true
+[node name="Angel2" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(10571, 367)
+
+[node name="Angel3" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(10037, 264)
+
+[node name="Angel4" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(10101, 930)
+
+[node name="Angel5" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(9221, 699)
+
+[node name="Angel6" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(7073, 563)
+
+[node name="Angel7" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(6920, 360)
+
+[node name="Angel8" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(5890, 424)
+
+[node name="Angel9" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(6706, 823)
+
+[node name="Angel10" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(4468, 456)
+
+[node name="Angel11" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(5284, 652)
+
+[node name="Angel12" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(5216, 168)
+
+[node name="Angel13" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(3481, 716)
+
+[node name="Angel14" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(2856, 417)
+
+[node name="Angel15" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(2784, 809)
+
+[node name="Angel16" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(2250, 738)
+
+[node name="Angel17" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(2481, 296)
+
+[node name="Angel18" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(8358, 607)
+
+[node name="Angel19" parent="Enemigos" instance=ExtResource("6_5rnk1")]
+position = Vector2(7697, 286)
 
 [node name="Loop3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_1yy2t")
 
-[connection signal="pressed" from="Control/VBoxContainer/Button" to="Control" method="_on_button_pressed"]
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(602, 46)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(10642, 517)
+shape = SubResource("RectangleShape2D_p07wi")
+
+[node name="PoderMunkar" type="Sprite2D" parent="."]
+position = Vector2(11247, 899)
+texture = ExtResource("5_0lqkb")
+
+[node name="isaac" parent="." instance=ExtResource("8_lywr5")]
+position = Vector2(1079, 828)
+
+[connection signal="finished" from="Loop3" to="." method="_on_loop_3_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

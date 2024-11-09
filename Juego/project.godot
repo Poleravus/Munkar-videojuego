@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Munkar_02"
-run/main_scene="res://Escenas/Ciudad.tscn"
+run/main_scene="res://Escenas/Cielo.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 

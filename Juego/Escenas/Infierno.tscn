@@ -1,13 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://cs4sgx83wpda1"]
+[gd_scene load_steps=12 format=3 uid="uid://cs4sgx83wpda1"]
 
 [ext_resource type="Texture2D" uid="uid://cmitk6e5chsxm" path="res://Partes/Infierno_2.png" id="1_2cp6t"]
 [ext_resource type="Script" path="res://Scrips/Musica_Infierno.gd" id="1_fdk4d"]
 [ext_resource type="Texture2D" uid="uid://yaqiqh8gfq3w" path="res://Partes/Infierno_2_3.png" id="2_m4p6f"]
 [ext_resource type="Texture2D" uid="uid://cm3vkjfovr56c" path="res://Partes/Infierno_2_2.png" id="3_p2lld"]
 [ext_resource type="AudioStream" uid="uid://c054g1qb73gj5" path="res://Musica Munkar/Canciones/Musica_Loop.wav" id="5_cwaqo"]
+[ext_resource type="PackedScene" uid="uid://dwwg6uw6hr6sq" path="res://Escenas/Issac.tscn" id="6_r7ydr"]
+[ext_resource type="Texture2D" uid="uid://3w2b2gjv01av" path="res://Sprites/Poder_Munkar.png" id="7_a4cbx"]
+[ext_resource type="PackedScene" uid="uid://3s3fpvrrms6x" path="res://Escenas/demonio.tscn" id="8_fh78u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2o4t4"]
 size = Vector2(11508.5, 302)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_edxho"]
+size = Vector2(329, 805)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x1iyn"]
+size = Vector2(389, 922)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 script = ExtResource("1_fdk4d")
@@ -46,6 +55,10 @@ texture = ExtResource("2_m4p6f")
 position = Vector2(5750.75, 930)
 shape = SubResource("RectangleShape2D_2o4t4")
 
+[node name="Pared" type="CollisionShape2D" parent="."]
+position = Vector2(165, 369)
+shape = SubResource("RectangleShape2D_edxho")
+
 [node name="Frente3" type="Sprite2D" parent="."]
 position = Vector2(9582.5, 539.75)
 scale = Vector2(0.806011, 0.761821)
@@ -63,3 +76,82 @@ texture = ExtResource("3_p2lld")
 
 [node name="Loop5" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_cwaqo")
+
+[node name="isaac" parent="." instance=ExtResource("6_r7ydr")]
+position = Vector2(713, 655)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(470, 6)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(10833.5, 418)
+shape = SubResource("RectangleShape2D_x1iyn")
+
+[node name="PoderMunkar" type="Sprite2D" parent="."]
+position = Vector2(11314, 684)
+texture = ExtResource("7_a4cbx")
+
+[node name="Enemigos" type="Node2D" parent="."]
+
+[node name="Enemigo" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(10545, 344)
+
+[node name="Enemigo2" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(10069, 306)
+
+[node name="Enemigo3" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(8999, 301)
+
+[node name="Enemigo4" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(9539, 327)
+
+[node name="Enemigo5" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(10933, 354)
+
+[node name="Enemigo6" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(8652, 536)
+
+[node name="Enemigo7" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(8340, 273)
+
+[node name="Enemigo8" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(8072, 632)
+
+[node name="Enemigo9" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(7529, 250)
+
+[node name="Enemigo10" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(7164, 677)
+
+[node name="Enemigo11" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(6055, 208)
+
+[node name="Enemigo12" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(5339, 635)
+
+[node name="Enemigo13" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(6652, 434)
+
+[node name="Enemigo14" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(4977, 157)
+
+[node name="Enemigo15" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(4261, 657)
+
+[node name="Enemigo16" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(3710, 267)
+
+[node name="Enemigo17" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(3075, 640)
+
+[node name="Enemigo18" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(2761, 275)
+
+[node name="Enemigo19" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(2080, 598)
+
+[node name="Enemigo20" parent="Enemigos" instance=ExtResource("8_fh78u")]
+position = Vector2(1634, 230)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

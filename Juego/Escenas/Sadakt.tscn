@@ -40,3 +40,4 @@ flat = true
 stream = ExtResource("4_snnju")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="finished" from="Loop4" to="." method="_on_loop_4_finished"]
