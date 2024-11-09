@@ -174,4 +174,40 @@ position = Vector2(6809, 556)
 [node name="Angel3" parent="Enemigos" instance=ExtResource("11_hiwet")]
 position = Vector2(4862, 367)
 
+[node name="Enemigo4" parent="Enemigos" instance=ExtResource("10_f2iqs")]
+position = Vector2(7432, 422)
+
+[node name="Enemigo5" parent="Enemigos" instance=ExtResource("10_f2iqs")]
+position = Vector2(9998, 408)
+
+[node name="Enemigo6" parent="Enemigos" instance=ExtResource("10_f2iqs")]
+position = Vector2(8875, 417)
+
+[node name="Angel4" parent="Enemigos" instance=ExtResource("11_hiwet")]
+position = Vector2(10888, 361)
+
+[node name="Angel5" parent="Enemigos" instance=ExtResource("11_hiwet")]
+position = Vector2(10096, 694)
+
+[node name="Angel6" parent="Enemigos" instance=ExtResource("11_hiwet")]
+position = Vector2(8149, 505)
+
+[node name="Enemigo7" parent="Enemigos" instance=ExtResource("10_f2iqs")]
+position = Vector2(11051, -2525)
+
+[node name="Enemigo8" parent="Enemigos" instance=ExtResource("10_f2iqs")]
+position = Vector2(13617, -2539)
+
+[node name="Enemigo9" parent="Enemigos" instance=ExtResource("10_f2iqs")]
+position = Vector2(12494, -2530)
+
+[node name="Angel7" parent="Enemigos" instance=ExtResource("11_hiwet")]
+position = Vector2(14507, -2586)
+
+[node name="Angel8" parent="Enemigos" instance=ExtResource("11_hiwet")]
+position = Vector2(13715, -2253)
+
+[node name="Angel9" parent="Enemigos" instance=ExtResource("11_hiwet")]
+position = Vector2(11768, -2442)
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
