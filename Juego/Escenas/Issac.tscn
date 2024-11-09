@@ -14,7 +14,7 @@
 script/source = "extends CharacterBody2D
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -600.0
+const JUMP_VELOCITY = -650.0
 var brincosdieras :bool = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -218,7 +218,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72jks"]
-size = Vector2(70, 184)
+size = Vector2(58, 184)
 
 [node name="isaac" type="CharacterBody2D"]
 script = SubResource("GDScript_dvpc1")
@@ -238,12 +238,10 @@ script = ExtResource("10_v3dgr")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_0osp5")
-animation = &"Salto"
-frame = 3
-frame_progress = 1.0
+animation = &"Caminar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 1)
+position = Vector2(-4, 1)
 shape = SubResource("RectangleShape2D_72jks")
 
 [node name="Camera2D" type="Camera2D" parent="."]
