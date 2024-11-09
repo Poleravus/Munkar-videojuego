@@ -1,0 +1,74 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1731115013
+icon.svg::CompressedTexture2D::2140581187739284373::1731114992::1731115014::1::::<><>::
+::res://Barra vida/::1731114992
+Vida_01.png::CompressedTexture2D::6741329357068504960::1731114992::1731115014::1::::<><>::
+Vida_02.png::CompressedTexture2D::2519323095434643039::1731114992::1731115014::1::::<><>::
+Vida_03.png::CompressedTexture2D::4140162497850194731::1731114992::1731115014::1::::<><>::
+::res://Botones/::1731114992
+Boton_jugar.png::CompressedTexture2D::4100791613761037878::1731114992::1731115014::1::::<><>::
+Boton_SALIR.png::CompressedTexture2D::7879013316244231811::1731114992::1731115014::1::::<><>::
+Cuadro_dialogo_siguiente.png::CompressedTexture2D::1520137309696434927::1731114992::1731115014::1::::<><>::
+Poder_Munkar.png::CompressedTexture2D::3236377651382103165::1731114992::1731115014::1::::<><>::
+::res://Escenas/::1731114992
+Cielo.tscn::PackedScene::7850999456509260945::1731114992::0::1::::<><>::res://Scrips/Musica_Cielo.gd<>uid://bgubiokacb5td::::res://Partes/Nubes_Pixel_art.png<>uid://bdb4w70dutbgc::::res://Partes/Cielo_02.png<>uid://dvjfhvs64chyp::::res://Partes/Cielo_03.png<>res://Scrips/Control_Cielo.gd<>uid://3w2b2gjv01av::::res://Sprites/Poder_Munkar.png<>uid://c054g1qb73gj5::::res://Musica Munkar/Canciones/Musica_Loop.wav
+Ciudad.tscn::PackedScene::2086092654632495297::1731114992::0::1::::<><>::res://Scrips/Musica_Ciudad.gd<>uid://cq8b4et4murxs::::res://Partes/Ciudad_01.png<>uid://cx7opx4rb4f18::::res://Partes/Ciudad_02.png<>uid://bhuhs2i7t024y::::res://Sprites/Suelo.png<>uid://bc4c4ypykoym1::::res://Partes/Ciudad_03.png<>res://Scrips/Control_ciudad.gd<>uid://bmdywxe21jexx::::res://Botones/Poder_Munkar.png<>uid://c054g1qb73gj5::::res://Musica Munkar/Canciones/Musica_Loop.wav<>uid://dwwg6uw6hr6sq::::res://Escenas/Issac.tscn
+demonio.tscn::PackedScene::2004156247291726541::1731114992::0::1::::<><>::res://Scrips/Enemigo.gd<>uid://cx0lh0lqwak0i::::res://Sprites/Sprite_Ojo.png
+Escalera.tscn::PackedScene::7232124667044196683::1731114992::0::1::::<><>::uid://bhuhs2i7t024y::::res://Sprites/Suelo.png<>res://Scrips/Musica_Escalera.gd<>uid://bgubiokacb5td::::res://Partes/Nubes_Pixel_art.png<>res://Scrips/Control_subir_cielo.gd<>uid://3w2b2gjv01av::::res://Sprites/Poder_Munkar.png
+Infierno.tscn::PackedScene::6097212388689527614::1731114992::0::1::::<><>::uid://cmitk6e5chsxm::::res://Partes/Infierno_2.png<>res://Scrips/Musica_Infierno.gd<>uid://yaqiqh8gfq3w::::res://Partes/Infierno_2_3.png<>uid://cm3vkjfovr56c::::res://Partes/Infierno_2_2.png<>uid://c054g1qb73gj5::::res://Musica Munkar/Canciones/Musica_Loop.wav
+Issac.tscn::PackedScene::8749253669144238408::1731114992::0::1::::<><>::uid://bqci8aomokv3n::::res://Sprites/Isaac Sprite/Ataque.png<>uid://d150elj5u7fyq::::res://Sprites/Isaac Sprite/Caminado.png<>uid://dsw6lc8nwltr5::::res://Sprites/Isaac Sprite/daño.png<>uid://butqsm3nkqa7n::::res://Sprites/Isaac Sprite/Idle.png<>uid://bstduyfnewtdv::::res://Sprites/Isaac Sprite/Salto.png<>uid://by8r4vnvy1uql::::res://Barra vida/Vida_03.png<>uid://bb5m5bdnchae6::::res://Barra vida/Vida_02.png<>uid://c3bsyej0fpv5i::::res://Barra vida/Vida_01.png<>res://Scrips/Barra.gd
+Libro.tscn::PackedScene::976762236504881932::1731114992::0::1::::<><>::uid://bbfoqmylb1215::::res://Pantallas/Libro.png<>res://Scrips/Libro.gd<>uid://vwmo67argvcx::::res://Botones/Cuadro_dialogo_siguiente.png<>uid://dked3k80bo0j8::::res://Musica Munkar/Canciones/Cancion_Munkar.wav
+pantalla_principal.tscn::PackedScene::1515511123950208472::1731114992::0::1::::<><>::res://Scrips/Pantalla_Principal.gd<>uid://de4eixr2hbamd::::res://Pantallas/Fondo_bueno_10.png<>uid://byopo6gpnotjy::::res://Botones/Boton_jugar.png<>uid://dkiwg0djpr6i6::::res://Botones/Boton_SALIR.png<>uid://dked3k80bo0j8::::res://Musica Munkar/Canciones/Cancion_Munkar.wav
+Sadakt.tscn::PackedScene::8637292926417093886::1731114992::0::1::::<><>::res://Scrips/Sadakt.gd<>uid://fj3svqfj3m68::::res://Pantallas/Libro_02.png<>uid://vwmo67argvcx::::res://Botones/Cuadro_dialogo_siguiente.png<>uid://dked3k80bo0j8::::res://Musica Munkar/Canciones/Cancion_Munkar.wav
+::res://Musica Munkar/::1731114992
+Angel.mp3::AudioStreamMP3::8284809299901191375::1731114992::1731115014::1::::<><>::
+Ataque_isaac.mp3::AudioStreamMP3::6184267222360720672::1731114992::1731115014::1::::<><>::
+Demon.mp3::AudioStreamMP3::8326252461528227228::1731114992::1731115014::1::::<><>::
+Demon_ataque.mp3::AudioStreamMP3::1181583361480380327::1731114992::1731115014::1::::<><>::
+Risa_demon.mp3::AudioStreamMP3::3372668295090943836::1731114992::1731115014::1::::<><>::
+::res://Musica Munkar/Canciones/::1731114992
+Cancion_Munkar.wav::AudioStreamWAV::7869640729033351191::1731114992::1731115016::1::::<><>::
+Musica_Loop.wav::AudioStreamWAV::6591266688925742184::1731114992::1731115016::1::::<><>::
+::res://Pantallas/::1731114992
+Fondo_bueno_10.png::CompressedTexture2D::7500142770356350131::1731114992::1731115014::1::::<><>::
+Libro.png::CompressedTexture2D::2467810694560328894::1731114992::1731115015::1::::<><>::
+Libro_02.png::CompressedTexture2D::371256966011992319::1731114992::1731115015::1::::<><>::
+Pantalla Pausa.png::CompressedTexture2D::2651492239296225285::1731114992::1731115015::1::::<><>::
+::res://Partes/::1731114992
+Cielo_02.png::CompressedTexture2D::2600853392148489290::1731114992::1731115015::1::::<><>::
+Cielo_03.png::CompressedTexture2D::8652124385029859739::1731114992::1731115015::1::::<><>::
+Ciudad_01.png::CompressedTexture2D::5964100077273855652::1731114992::1731115015::1::::<><>::
+Ciudad_02.png::CompressedTexture2D::6454122937609430145::1731114992::1731115016::1::::<><>::
+Ciudad_03.png::CompressedTexture2D::2586839832682535906::1731114992::1731115015::1::::<><>::
+Infierno_2.png::CompressedTexture2D::5632795629645784954::1731114992::1731115015::1::::<><>::
+Infierno_2_2.png::CompressedTexture2D::5674203464042445424::1731114992::1731115016::1::::<><>::
+Infierno_2_3.png::CompressedTexture2D::1685518858243116022::1731114992::1731115016::1::::<><>::
+Nubes_Pixel_art.png::CompressedTexture2D::2848917054724189993::1731114992::1731115014::1::::<><>::
+::res://Scrips/::1731114992
+Barra.gd::GDScript::-1::1731114992::0::1::::<>TextureProgressBar<>::
+Control_Cielo.gd::GDScript::-1::1731114992::0::1::::<>Control<>::
+Control_ciudad.gd::GDScript::-1::1731114992::0::1::::<>Control<>::
+Control_subir_cielo.gd::GDScript::-1::1731114992::0::1::::<>Control<>::
+Demonio.gd::GDScript::-1::1731114992::0::1::::<>Area2D<>::
+Enemigo.gd::GDScript::-1::1731114992::0::1::::Enemigo<>CharacterBody2D<>::
+Issac.gd::GDScript::-1::1731114992::0::1::::<>CharacterBody2D<>::
+Libro.gd::GDScript::-1::1731114992::0::1::::<>Control<>::
+Musica_Cielo.gd::GDScript::-1::1731114992::0::1::::<>StaticBody2D<>::
+Musica_Ciudad.gd::GDScript::-1::1731114992::0::1::::<>StaticBody2D<>::
+Musica_Escalera.gd::GDScript::-1::1731114992::0::1::::<>StaticBody2D<>::
+Musica_Infierno.gd::GDScript::-1::1731114992::0::1::::<>StaticBody2D<>::
+Pantalla_Principal.gd::GDScript::-1::1731114992::0::1::::<>Control<>::
+Sadakt.gd::GDScript::-1::1731114992::0::1::::<>Control<>::
+::res://Sprites/::1731114992
+Ojo_1.png::CompressedTexture2D::3930146237372633288::1731114992::1731115014::1::::<><>::
+Ojo_3.png::CompressedTexture2D::5680066060157079721::1731114992::1731115014::1::::<><>::
+Poder_Munkar.png::CompressedTexture2D::2012346504890096181::1731114992::1731115014::1::::<><>::
+Sprite_Angel.png::CompressedTexture2D::3813370436692371664::1731114992::1731115014::1::::<><>::
+Sprite_Ojo.png::CompressedTexture2D::6439475933223187490::1731114992::1731115014::1::::<><>::
+Suelo.png::CompressedTexture2D::2919488739449404630::1731114992::1731115014::1::::<><>::
+::res://Sprites/Isaac Sprite/::1731114992
+Ataque.png::CompressedTexture2D::3514115626742345929::1731114992::1731115014::1::::<><>::
+Caminado.png::CompressedTexture2D::9047628979335864724::1731114992::1731115014::1::::<><>::
+daño.png::CompressedTexture2D::8469979574307676228::1731114992::1731115014::1::::<><>::
+Idle.png::CompressedTexture2D::3830425024094815245::1731114992::1731115014::1::::<><>::
+Salto.png::CompressedTexture2D::3689262182242535191::1731114992::1731115014::1::::<><>::
