@@ -1,16 +1,17 @@
-[gd_scene load_steps=15 format=3 uid="uid://4yrv2jj5j3f6"]
+[gd_scene load_steps=14 format=3 uid="uid://4yrv2jj5j3f6"]
 
 [ext_resource type="Script" path="res://Scrips/Musica_Ciudad.gd" id="1_5p1y8"]
 [ext_resource type="Texture2D" uid="uid://cq8b4et4murxs" path="res://Partes/Ciudad_01.png" id="1_sckip"]
 [ext_resource type="Texture2D" uid="uid://cx7opx4rb4f18" path="res://Partes/Ciudad_02.png" id="2_t0cmb"]
 [ext_resource type="Texture2D" uid="uid://bhuhs2i7t024y" path="res://Sprites/Suelo.png" id="3_jqao0"]
 [ext_resource type="Texture2D" uid="uid://bc4c4ypykoym1" path="res://Partes/Ciudad_03.png" id="4_7di03"]
-[ext_resource type="Script" path="res://Scrips/Control_ciudad.gd" id="5_ngfge"]
-[ext_resource type="Texture2D" uid="uid://bmdywxe21jexx" path="res://Botones/Poder_Munkar.png" id="6_jpxy5"]
 [ext_resource type="AudioStream" uid="uid://c054g1qb73gj5" path="res://Musica Munkar/Canciones/Musica_Loop.wav" id="8_cd0dp"]
 [ext_resource type="PackedScene" uid="uid://dwwg6uw6hr6sq" path="res://Escenas/Issac.tscn" id="9_joih7"]
 [ext_resource type="PackedScene" uid="uid://3s3fpvrrms6x" path="res://Escenas/demonio.tscn" id="10_f2iqs"]
 [ext_resource type="PackedScene" uid="uid://b3b1kd356pq2x" path="res://Escenas/angel.tscn" id="11_hiwet"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adjun"]
+size = Vector2(208, 994.5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_shvnh"]
 texture = ExtResource("3_jqao0")
@@ -29,6 +30,13 @@ size = Vector2(11643, 90.5)
 
 [node name="Ciudad" type="StaticBody2D"]
 script = ExtResource("1_5p1y8")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(10896, 499.25)
+shape = SubResource("RectangleShape2D_adjun")
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -122,34 +130,6 @@ position = Vector2(962.25, 536)
 scale = Vector2(0.811055, 0.773465)
 texture = ExtResource("4_7di03")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 10688.0
-offset_top = 90.0
-offset_right = 10962.0
-offset_bottom = 360.0
-script = ExtResource("5_ngfge")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -98.0
-offset_top = -77.0
-offset_right = 41.0
-offset_bottom = 59.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Button" type="Button" parent="Control/VBoxContainer"]
-layout_mode = 2
-icon = ExtResource("6_jpxy5")
-flat = true
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_3xlik")
 rendering_quadrant_size = 64
@@ -187,4 +167,4 @@ position = Vector2(6809, 556)
 [node name="Angel3" parent="Enemigos" instance=ExtResource("11_hiwet")]
 position = Vector2(4862, 367)
 
-[connection signal="pressed" from="Control/VBoxContainer/Button" to="Control" method="_on_button_pressed"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
