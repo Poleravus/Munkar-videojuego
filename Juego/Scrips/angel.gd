@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-class_name Enemigo
 var speed = 190
 var player = null
 

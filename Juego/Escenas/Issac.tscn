@@ -19,26 +19,70 @@ const JUMP_VELOCITY = -600.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
+@onready var proyectil = load(\"res://Escenas/proyectil.tscn\")
+@onready var mundo = self.get_parent()
+@onready var enemigos_arr = mundo.get_child(6).get_children()
+@onready var animatedSprite = $AnimatedSprite2D
+var animacionActual
+var in_cooldown = false
 
+func _process(delta):
+	enemigos_arr = mundo.get_child(6).get_children()
 
 func _physics_process(delta):
-	# Add the gravity.
+	movimiento_Isaac(delta)
+	if Input.is_action_just_pressed(\"Poder\"):
+		if !enemigos_arr.is_empty() and !in_cooldown:
+			$Timer.start(1)
+			in_cooldown = true
+			var proyectil_nuevo = proyectil.instantiate()
+			proyectil_nuevo.global_position = self.global_position
+			proyectil_nuevo.enemigos = enemigos_arr
+			mundo.add_child(proyectil_nuevo)
+		
+
+func movimiento_Isaac(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	var moving = false
 
-	# Handle jump.
-	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+	if Input.is_action_pressed(\"Derecha\"):
+		velocity.x = SPEED
+		moving = true
+		animatedSprite.flip_h = false
+
+
+	elif Input.is_action_pressed(\"Izquierda\"):
+		velocity.x = -SPEED
+		moving = true
+		animatedSprite.flip_h = true
+
+
+	if Input.is_action_just_pressed(\"Salto\") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		animatedSprite.play(\"Salto\")
+		animacionActual = \"Salto\"
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis(\"Izquierda\", \"Derecha\")
-	if direction:
-		velocity.x = direction * SPEED
+	if is_on_floor():
+		if moving:
+			animatedSprite.play(\"Caminar\")
+			animacionActual = \"Move\"
+		else:
+			animatedSprite.play(\"Idle\")
+			animacionActual = \"Idle\"
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		if animacionActual != \"Salto\":
+			animatedSprite.play(\"Salto\")
+			animacionActual = \"Salto\"
+
+	if not moving:
+		velocity.x = 0
 
 	move_and_slide()
+
+
+func _on_timer_timeout():
+	in_cooldown = false
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_blq8c"]
@@ -212,7 +256,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72jks"]
 size = Vector2(70, 184)
 
-[node name="isaac" type="CharacterBody2D"]
+[node name="isaac" type="CharacterBody2D" groups=["isaac"]]
 script = SubResource("GDScript_dvpc1")
 
 [node name="Barra" type="TextureProgressBar" parent="." groups=["Barra"]]
@@ -255,3 +299,8 @@ drag_left_margin = 0.28
 drag_top_margin = 0.0
 drag_right_margin = 0.0
 drag_bottom_margin = 0.28
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

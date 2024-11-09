@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://4yrv2jj5j3f6"]
+[gd_scene load_steps=15 format=3 uid="uid://4yrv2jj5j3f6"]
 
 [ext_resource type="Script" path="res://Scrips/Musica_Ciudad.gd" id="1_5p1y8"]
 [ext_resource type="Texture2D" uid="uid://cq8b4et4murxs" path="res://Partes/Ciudad_01.png" id="1_sckip"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bmdywxe21jexx" path="res://Botones/Poder_Munkar.png" id="6_jpxy5"]
 [ext_resource type="AudioStream" uid="uid://c054g1qb73gj5" path="res://Musica Munkar/Canciones/Musica_Loop.wav" id="8_cd0dp"]
 [ext_resource type="PackedScene" uid="uid://dwwg6uw6hr6sq" path="res://Escenas/Issac.tscn" id="9_joih7"]
+[ext_resource type="PackedScene" uid="uid://3s3fpvrrms6x" path="res://Escenas/demonio.tscn" id="10_f2iqs"]
+[ext_resource type="PackedScene" uid="uid://b3b1kd356pq2x" path="res://Escenas/angel.tscn" id="11_hiwet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_shvnh"]
 texture = ExtResource("3_jqao0")
@@ -162,6 +164,27 @@ shape = SubResource("RectangleShape2D_gvhg2")
 stream = ExtResource("8_cd0dp")
 
 [node name="isaac" parent="." instance=ExtResource("9_joih7")]
-position = Vector2(980, 828)
+position = Vector2(931, 852)
+
+[node name="Enemigos" type="Node2D" parent="."]
+position = Vector2(-240, -152)
+
+[node name="Enemigo" parent="Enemigos" instance=ExtResource("10_f2iqs")]
+position = Vector2(4145, 284)
+
+[node name="Enemigo3" parent="Enemigos" instance=ExtResource("10_f2iqs")]
+position = Vector2(6711, 270)
+
+[node name="Enemigo2" parent="Enemigos" instance=ExtResource("10_f2iqs")]
+position = Vector2(5588, 279)
+
+[node name="Angel" parent="Enemigos" instance=ExtResource("11_hiwet")]
+position = Vector2(7601, 223)
+
+[node name="Angel2" parent="Enemigos" instance=ExtResource("11_hiwet")]
+position = Vector2(6809, 556)
+
+[node name="Angel3" parent="Enemigos" instance=ExtResource("11_hiwet")]
+position = Vector2(4862, 367)
 
 [connection signal="pressed" from="Control/VBoxContainer/Button" to="Control" method="_on_button_pressed"]
