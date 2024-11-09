@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bp8nykbovj5hk"]
+
+[ext_resource type="Texture2D" uid="uid://bhuhs2i7t024y" path="res://Sprites/Suelo.png" id="1_hvvri"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_shvnh"]
+texture = ExtResource("1_hvvri")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_shvnh")
