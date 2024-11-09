@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb5m5bdnchae6"
-path="res://.godot/imported/Vida_02.png-ac64cdbc65078e101a7823f74c064ed4.ctex"
+uid="uid://jh3dhomvdrmm"
+path="res://.godot/imported/Boton_jugar_02.png-6dfed7569c70c4e801f2395fe24ab59a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Barra vida/Vida_02.png"
-dest_files=["res://.godot/imported/Vida_02.png-ac64cdbc65078e101a7823f74c064ed4.ctex"]
+source_file="res://Botones/Boton_jugar_02.png"
+dest_files=["res://.godot/imported/Boton_jugar_02.png-6dfed7569c70c4e801f2395fe24ab59a.ctex"]
 
 [params]
 
