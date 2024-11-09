@@ -21,24 +21,35 @@ const JUMP_VELOCITY = -600.0
 var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
 @onready var proyectil = load(\"res://Escenas/proyectil.tscn\")
 @onready var mundo = self.get_parent()
-@onready var enemigos_arr = mundo.get_child(6).get_children()
+var enemigos_arr
+var nodo_enemigos
 @onready var animatedSprite = $AnimatedSprite2D
 var animacionActual
 var in_cooldown = false
-
+var encontrado = false
+func _ready():
+	var hijos = mundo.get_children()
+	for hijo in hijos:
+		if hijo.get_name() == \"Enemigos\":
+			nodo_enemigos = hijo
+			enemigos_arr = nodo_enemigos.get_children()
+			encontrado = true
+			
 func _process(delta):
-	enemigos_arr = mundo.get_child(6).get_children()
+	if nodo_enemigos != null:
+		enemigos_arr = nodo_enemigos.get_children()
 
 func _physics_process(delta):
 	movimiento_Isaac(delta)
 	if Input.is_action_just_pressed(\"Poder\"):
-		if !enemigos_arr.is_empty() and !in_cooldown:
-			$Timer.start(1)
-			in_cooldown = true
-			var proyectil_nuevo = proyectil.instantiate()
-			proyectil_nuevo.global_position = self.global_position
-			proyectil_nuevo.enemigos = enemigos_arr
-			mundo.add_child(proyectil_nuevo)
+		if encontrado:
+			if !enemigos_arr.is_empty() and !in_cooldown:
+				$Timer.start(1)
+				in_cooldown = true
+				var proyectil_nuevo = proyectil.instantiate()
+				proyectil_nuevo.global_position = self.global_position
+				proyectil_nuevo.enemigos = enemigos_arr
+				mundo.add_child(proyectil_nuevo)
 		
 
 func movimiento_Isaac(delta):
@@ -284,7 +295,7 @@ position = Vector2(-9, 2)
 shape = SubResource("RectangleShape2D_72jks")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-38, 79)
+position = Vector2(49, -138)
 scale = Vector2(2, 2)
 zoom = Vector2(1.3, 1.3)
 limit_left = -100000
