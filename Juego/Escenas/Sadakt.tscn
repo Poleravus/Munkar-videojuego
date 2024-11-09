@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvb77nf7wq2k5"]
+
+[ext_resource type="Script" path="res://Scrips/Sadakt.gd" id="1_7hnu0"]
+[ext_resource type="Texture2D" uid="uid://fj3svqfj3m68" path="res://Pantallas/Libro_02.png" id="1_pg7pf"]
+[ext_resource type="Texture2D" uid="uid://vwmo67argvcx" path="res://Botones/Cuadro_dialogo_siguiente.png" id="2_6cc4y"]
+[ext_resource type="AudioStream" uid="uid://dked3k80bo0j8" path="res://Musica Munkar/Canciones/Cancion_Munkar.wav" id="4_snnju"]
+
+[node name="Sadakt" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7hnu0")
+
+[node name="Libro02" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1.00313, 1.00556)
+texture = ExtResource("1_pg7pf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1670.0
+offset_top = 486.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("2_6cc4y")
+flat = true
+
+[node name="Loop4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_snnju")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
